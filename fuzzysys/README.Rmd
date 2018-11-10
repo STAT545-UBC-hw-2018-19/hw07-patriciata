@@ -1,0 +1,31 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# fuzzysys: Simple Fuzzy Inference and Fuzzy Systems
+
+fuzzysys is, in some ways, a wrapper package for fuzzy set functions from the package 'sets'. The goal of fuzzysys is to re-imagine fuzzy set and inference functions from the [original `sets` package](https://cran.r-project.org/web/packages/sets/index.html) by David Meyer et al., with more customizability and control. 
+
+fuzzysys compiles useful tools to build a simple fuzzy rule-based expert system model. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
+
+Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+## basic example code
+```
