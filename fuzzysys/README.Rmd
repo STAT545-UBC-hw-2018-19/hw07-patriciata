@@ -20,8 +20,6 @@ The goal of fuzzysys is to provide a wrapper for fuzzy set functions from the pa
 
 fuzzysys re-imagines fuzzy set and inference functions from the original `sets` package by David Meyer et al.<sup>[1](#citation)</sup>, with added customizability and control. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
 
-<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
-
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
@@ -29,3 +27,17 @@ This is a basic example which shows you how to solve a common problem:
 ```{r example}
 ## basic example code
 ```
+
+
+## Another example 
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example2}
+## basic example code
+```
+
+
+
+
+<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
