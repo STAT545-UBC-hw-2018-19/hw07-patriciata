@@ -24,4 +24,4 @@ This is a basic example which shows you how to solve a common problem:
 ## basic example code
 ```
 
-<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](10.18637/jss.v031.i02).
+<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](https://www.jstatsoft.org/article/view/v031i02).
