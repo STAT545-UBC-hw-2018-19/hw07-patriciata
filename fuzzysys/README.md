@@ -2,11 +2,11 @@
 fuzzysys: Simple Fuzzy Inference and Fuzzy Systems
 ==================================================
 
-fuzzysys is, in some ways, a wrapper package for fuzzy set functions from the package 'sets'. The goal of fuzzysys is to re-imagine fuzzy set and inference functions from the [original `sets` package](https://cran.r-project.org/web/packages/sets/index.html) by David Meyer et al., with more customizability and control.
+The goal of fuzzysys is to provide a wrapper for fuzzy set functions from the package ['sets'](https://cran.r-project.org/web/packages/sets/index.html).
 
-fuzzysys compiles useful tools to build a simple fuzzy rule-based expert system model. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
+fuzzysys re-imagines fuzzy set and inference functions from the original `sets` package by David Meyer et al. [1](#citation), with added customizability and control. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
 
-Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
+<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
 
 Example
 -------
