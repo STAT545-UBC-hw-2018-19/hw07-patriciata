@@ -96,5 +96,5 @@ You can install `fuzzysys` from github with
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("STAT545-UBC-students/hw07-patriciata/tree/master/fuzzysys")
+devtools::install_github("STAT545-UBC-students/hw07-patriciata/fuzzysys")
 ```
