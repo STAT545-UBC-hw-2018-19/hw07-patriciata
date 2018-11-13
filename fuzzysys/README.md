@@ -2,7 +2,7 @@
 fuzzysys: Simple Fuzzy Inference and Fuzzy Systems
 ==================================================
 
-The goal of fuzzysys is to provide a wrapper for fuzzy set functions from the package ['sets'](https://cran.r-project.org/web/packages/sets/index.html).
+The goal of fuzzysys is to provide a wrapper for fuzzy set functions from the package ['sets'](https://cran.r-project.org/web/packages/sets/index.html). (Scroll to bottom of page<sup>[2](#install)</sup> for installation instructions)
 
 fuzzysys re-imagines fuzzy set and inference functions from the original `sets` package by David Meyer et al.<sup>[1](#citation)</sup>, with added customizability and control. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
 
@@ -87,4 +87,11 @@ x
 
 More information about each fuzzy logic family and their respective operator definitions can be found in the original `sets` [documentation](https://www.rdocumentation.org/packages/sets/versions/1.0-18/topics/fuzzy).
 
-<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](https://www.jstatsoft.org/article/view/v031i02).
+<a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](https://www.jstatsoft.org/article/view/v031i02). \#\# Installation
+
+<a name="install">2</a>: You can install powers from github with
+
+``` r
+# install.packages("devtools")
+devtools::install_github("STAT545-UBC-students/hw07-patriciata/tree/master/fuzzysys")
+```
