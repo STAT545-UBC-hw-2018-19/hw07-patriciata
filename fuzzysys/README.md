@@ -72,13 +72,19 @@ Similarly, for the disjunction operator:
 #> [1] 0.7 1.0 1.0
 ```
 
-Consistent with the original sets::.N.() function, the negation operator .N() in `fuzzysys` is always defined as 1 − *x* irrespective of the fuzzy logic family.
+And the negation operator (.N.()), which in most fuzzy logic families is defined as 1 − *x*.
 
 ``` r
 x
 #> [1] 0.7 0.8 0.9
-.N(x)
+.N(x,type="Zadeh")
+#> [1] 0.3 0.2 0.1
+.N(x,type="product")
+#> [1] 0.3 0.2 0.1
+.N(x,type="Fodor")
 #> [1] 0.3 0.2 0.1
 ```
+
+More information about each fuzzy logic family and their respective operator definitions can be found in the original `sets` [documentation](https://www.rdocumentation.org/packages/sets/versions/1.0-18/topics/fuzzy).
 
 <a name="citation">1</a>: Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](https://www.jstatsoft.org/article/view/v031i02).

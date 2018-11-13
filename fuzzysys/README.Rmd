@@ -77,9 +77,9 @@ And the negation operator (.N.()), which in most fuzzy logic families is defined
 
 ```{r}
 x
-.N(x,y,type="Zadeh")
-.N(x,y,type="product")
-.N(x,y,type="Fodor")
+.N(x,type="Zadeh")
+.N(x,type="product")
+.N(x,type="Fodor")
 ```
 
 More information about each fuzzy logic family and their respective operator definitions can be found in the original `sets` [documentation](https://www.rdocumentation.org/packages/sets/versions/1.0-18/topics/fuzzy).
