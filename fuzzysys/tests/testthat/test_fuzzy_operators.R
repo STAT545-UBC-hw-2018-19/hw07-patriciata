@@ -13,3 +13,9 @@ test_that("Default Zadeh type fuzzy logic matches definitions in sets package.",
   expect_identical(.T(x,y), pmin(x,y))
   expect_identical(.S(x,y), pmax(x,y))
 })
+
+
+test_that("Negation operator matches expected behaviour in default Zadeh type fuzzy logic (1-x).", {
+  x <- c(0.1, 0.2, 0.3)
+  expect_identical(.N(x), c(0.9,0.8,0.7))
+})

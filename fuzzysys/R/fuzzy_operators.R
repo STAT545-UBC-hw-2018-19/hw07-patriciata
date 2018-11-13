@@ -45,6 +45,6 @@
 #' @rdname fuzzy_operators
 #' @export
 .N <- function (x,type="Zadeh") {
-  fuzzy_logic(type)$N(x)
+  sets::fuzzy_logic(type)$N(x)
 }
 
