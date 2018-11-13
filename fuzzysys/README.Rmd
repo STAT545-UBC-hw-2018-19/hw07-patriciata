@@ -22,13 +22,13 @@ fuzzysys re-imagines fuzzy set and inference functions from the original `sets` 
 
 So far, it includes the basic fuzzy logic operators: negation ("NOT"), conjunction ("AND"), and disjunction ("OR"). These act as non-dynamic wrapper functions for functions in sets::fuzzy_logic().
 
-For some context, these operators can be defined slightly differently depending on which fuzzy logic family (convention) one chooses to use. For example, "AND" can be defined as the minimum of two values (min(x,y)); but, with another fuzzy logic family, it is sometimes defined as x*y.
-
 ## Example
 
-With the `sets` package, to conduct fuzzy logic operations between membership values of fuzzy sets, you would normally have to stick to one so-called fuzzy logic "family". 
+Fuzzy logic operators can be defined slightly differently depending on which fuzzy logic family or convention one chooses to use. (For example, the conjunction, or "AND" operator, is often defined as the minimum of two values (min(x,y)). However, with an alternative fuzzy logic family, it is could instead be defined as x*y.)
 
-Here we use the (dynamic) functions from the `sets` package: .N.(), .T.(), and .S.() for negation, conjunction, and disjunction respectively:
+With the `sets` package, to conduct fuzzy logic operations between membership values of fuzzy sets, you would normally have to stick to one so-called fuzzy logic family. 
+
+To illustrate, here is an example from `sets`. Here we use the (dynamic) functions from the `sets` package: .N.(), .T.(), and .S.() for negation, conjunction, and disjunction respectively:
 
 ```{r example_sets}
 library(sets)
