@@ -4,7 +4,7 @@ fuzzysys: Simple Fuzzy Inference and Fuzzy Systems
 
 The goal of fuzzysys is to provide a wrapper for fuzzy set functions from the package ['sets'](https://cran.r-project.org/web/packages/sets/index.html).
 
-fuzzysys re-imagines fuzzy set and inference functions from the original `sets` package by David Meyer et al.<sup>[1](#citation)</sup>, with added customizability and control. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
+fuzzysys re-imagines fuzzy set functions from the original `sets` package by David Meyer et al.<sup>[1](#citation)</sup>, with added customizability and control. It aims to be highly customizable for a variety of needs, without the clutter that comes with more hefty packages.
 
 Example
 -------
