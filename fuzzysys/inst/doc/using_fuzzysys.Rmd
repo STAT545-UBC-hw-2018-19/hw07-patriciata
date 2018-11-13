@@ -82,13 +82,15 @@ x
 
 It's `purrr` friendly, too!
 
+First load the `purrr` package
+
 ```{r}
 library(purrr)
 x_list <- list((1:10)/10, 0.5, 0.7)
 y_list <- list((10:1)/10, 0.5, 0.7)
 ```
 
-Both `sets` and `fuzzysys` can handle one fuzzy logic family (default: "Zadeh")
+Both `sets` and `fuzzysys` can handle one fuzzy logic family (default: "Zadeh") while looping over our 2 lists
 
 ```{r}
 # with original `sets` wrapper functions

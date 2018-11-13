@@ -12,7 +12,7 @@
 
 <meta name="author" content="Patricia T. Angkiriwang" />
 
-<meta name="date" content="2018-11-12" />
+<meta name="date" content="2018-11-13" />
 
 <title>Using the fuzzysys package</title>
 
@@ -70,18 +70,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Using the <code>fuzzysys</code> package</h1>
 <h4 class="author"><em>Patricia T. Angkiriwang</em></h4>
-<h4 class="date"><em>2018-11-12</em></h4>
+<h4 class="date"><em>2018-11-13</em></h4>
 
 
 
 <p>Fuzzy logic operators (i.e. negation (“NOT”), conjunction (“AND”), and disjunction (“OR”)) can be defined slightly differently depending on which fuzzy logic family or convention one chooses to use.</p>
 <p>With the <code>sets</code> package, you would normally have to stick to one so-called fuzzy logic family. For example…</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sets)
-<span class="co">#&gt; </span>
-<span class="co">#&gt; Attaching package: 'sets'</span>
-<span class="co">#&gt; The following object is masked from 'package:purrr':</span>
-<span class="co">#&gt; </span>
-<span class="co">#&gt;     %&gt;%</span>
 
 <span class="co"># Define example numeric vectors x and y</span>
 x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="fl">0.7</span>, <span class="fl">0.8</span>, <span class="fl">0.9</span>)
@@ -132,10 +127,11 @@ sets<span class="op">::</span><span class="kw">.S.</span>(x, y)
 <span class="kw">.N</span>(x,<span class="dt">type=</span><span class="st">&quot;Fodor&quot;</span>)
 <span class="co">#&gt; [1] 0.3 0.2 0.1</span></code></pre></div>
 <p>It’s <code>purrr</code> friendly, too!</p>
+<p>First load the <code>purrr</code> package</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(purrr)
 x_list &lt;-<span class="st"> </span><span class="kw">list</span>((<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>)<span class="op">/</span><span class="dv">10</span>, <span class="fl">0.5</span>, <span class="fl">0.7</span>)
 y_list &lt;-<span class="st"> </span><span class="kw">list</span>((<span class="dv">10</span><span class="op">:</span><span class="dv">1</span>)<span class="op">/</span><span class="dv">10</span>, <span class="fl">0.5</span>, <span class="fl">0.7</span>)</code></pre></div>
-<p>Both <code>sets</code> and <code>fuzzysys</code> can handle one fuzzy logic family (default: “Zadeh”)</p>
+<p>Both <code>sets</code> and <code>fuzzysys</code> can handle one fuzzy logic family (default: “Zadeh”) while looping over our 2 lists</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># with original `sets` wrapper functions</span>
 <span class="kw">map2</span>(x_list,y_list,sets<span class="op">::</span>.T.)
 <span class="co">#&gt; [[1]]</span>
