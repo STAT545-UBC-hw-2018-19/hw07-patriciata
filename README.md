@@ -5,5 +5,4 @@ This assignment covers R package creation and documentation. The homework prompt
 
 |  Assignment Files  |         |
 |--------------------|-----------|
-| [R package: fuzzysys](https://github.com/STAT545-UBC-students/hw07-patriciata/tree/master/fuzzysys)| New R package for customized fuzzy systems inference (see README for more details)|
-| [](https://github.com/STAT545-UBC-students/hw07-patriciata/blob/master/filename.ext)|  |
+| [R package: fuzzysys](https://github.com/STAT545-UBC-students/hw07-patriciata/tree/master/fuzzysys)| New R package for customized fuzzy sets calculations (see package [README](https://github.com/STAT545-UBC-students/hw07-patriciata/blob/master/fuzzysys/README.md) for more details)|
