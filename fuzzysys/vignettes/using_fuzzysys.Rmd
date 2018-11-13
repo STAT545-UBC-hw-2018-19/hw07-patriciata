@@ -1,0 +1,109 @@
+---
+title: "Using the `fuzzysys` package"
+author: "Patricia T. Angkiriwang"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using the `fuzzysys` package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+Fuzzy logic operators (i.e. negation ("NOT"), conjunction ("AND"), and disjunction ("OR")) can be defined slightly differently depending on which fuzzy logic family or convention one chooses to use. 
+
+With the `sets` package, you would normally have to stick to one so-called fuzzy logic family. For example...
+
+```{r example_sets}
+library(sets)
+
+# Define example numeric vectors x and y
+x <- c(0.7, 0.8, 0.9)
+y <- c(0.2, 0.3, 0.4)
+
+sets::fuzzy_logic("Zadeh") # specifies fuzzy logic family as "Zadeh"
+
+sets::.N.(x) # apply negation
+sets::.T.(x, y) # conjunction
+sets::.S.(x, y) # disjunction
+```
+
+To switch families, one would have to change the default/ current settings, like so: 
+
+```{r example_sets2}
+sets::fuzzy_logic("product") # switch fuzzy logic family
+
+sets::.N.(x)
+sets::.T.(x, y)
+sets::.S.(x, y)
+```
+
+Why restrict yourself to only one family, or have an extra line every time you want to switch?!
+
+The wrapper functions defined in this new `fuzzysys` package allow you to specify which family/ type of operator you want to use more concretely, without having to define one single fuzzy logic family.
+
+Let's load the package:
+
+```{r}
+library(fuzzysys)
+```
+
+
+Now you can use different versions of the conjunction operator (specified by an argument to.T()) one line after another:
+
+```{r example}
+.T(x,y,type="Zadeh")
+.T(x,y,type="product")
+.T(x,y,type="Fodor")
+```
+
+Similarly, for the disjunction operator:
+
+```{r}
+.S(x,y,type="Zadeh")
+.S(x,y,type="product")
+.S(x,y,type="Fodor")
+```
+
+And the negation operator (.N.()), which in most fuzzy logic families is defined as $1-x$.
+
+```{r}
+x
+.N(x,type="Zadeh")
+.N(x,type="product")
+.N(x,type="Fodor")
+```
+
+It's `purrr` friendly, too!
+
+```{r}
+library(purrr)
+x_list <- list((1:10)/10, 0.5, 0.7)
+y_list <- list((10:1)/10, 0.5, 0.7)
+```
+
+Both `sets` and `fuzzysys` can handle one fuzzy logic family (default: "Zadeh")
+
+```{r}
+# with original `sets` wrapper functions
+map2(x_list,y_list,sets::.T.)
+# with `fuzzysys` wrapper functions
+map2(x_list,y_list,.T)
+```
+
+But with `fuzzysys` it's easy to switch between families when we use pmap()! Here, three different fuzzy logic families are used: 
+
+```{r}
+pmap(list(x_list,y_list,list("Zadeh","product","Fodor")),~.T(..1,..2,type=..3))
+```
+
+More information about each fuzzy logic family and their respective operator definitions can be found in the original `sets` [documentation](https://www.rdocumentation.org/packages/sets/versions/1.0-18/topics/fuzzy).
+
+Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: [10.18637/jss.v031.i02](https://www.jstatsoft.org/article/view/v031i02).
+

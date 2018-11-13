@@ -14,7 +14,7 @@
 #' It outputs the result of \code{sets::fuzzy_logic()$S}, but replaces values with 1 in the cases where values in either \code{x} or \code{y} is \code{NA} and the other is 1 (i.e., ignore the \code{NA} value).}
 #' \item{.N : negation operator}{
 #' This function calculates the equivalent of the "NOT" operator in fuzzy logic.
-#' Outputs \code{1-x}, consistent with \code{sets::fuzzy_logic()$N} for all fuzzy logic families.}}
+#' Outputs \code{1-x} for most fuzzy logic families, consistent with \code{sets::fuzzy_logic()$N}.}}
 #'
 #' @section References:
 #' Meyer D and Hornik K (2009). “Generalized and Customizable Sets in R.” Journal of Statistical Software, 31(2), pp. 1–27. doi: 10.18637/jss.v031.i02.
@@ -44,7 +44,7 @@
 
 #' @rdname fuzzy_operators
 #' @export
-.N <- function (x) {
-  1-x # Consistent with sets::fuzzy_logic()$N for all fuzzy logic families
+.N <- function (x,type="Zadeh") {
+  fuzzy_logic(type)$N(x)
 }
 

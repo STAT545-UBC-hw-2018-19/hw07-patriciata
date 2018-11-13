@@ -11,11 +11,13 @@ So far, it includes the basic fuzzy logic operators: negation ("NOT"), conjuncti
 Example
 -------
 
-Fuzzy logic operators can be defined slightly differently depending on which fuzzy logic family or convention one chooses to use. (For example, the conjunction, or "AND" operator, is often defined as the minimum of two values (min(x,y)). However, with an alternative fuzzy logic family, it is could instead be defined as x\*y.)
+Fuzzy logic operators can be defined slightly differently depending on which fuzzy logic family or convention one chooses to use. (For example, the conjunction, or "AND" operator, is often defined as the minimum of two values (). However, with an alternative fuzzy logic family, it is could instead be defined as *x* \* *y*.)
 
 With the `sets` package, to conduct fuzzy logic operations between membership values of fuzzy sets, you would normally have to stick to one so-called fuzzy logic family.
 
-To illustrate, here is an example from `sets`. Here we use the (dynamic) functions from the `sets` package: .N.(), .T.(), and .S.() for negation, conjunction, and disjunction respectively:
+To illustrate, here is an example from `sets`.
+
+Here we use the (dynamic) functions from the `sets` package: .N.(), .T.(), and .S.() for negation, conjunction, and disjunction respectively:
 
 ``` r
 library(sets)
@@ -70,7 +72,7 @@ Similarly, for the disjunction operator:
 #> [1] 0.7 1.0 1.0
 ```
 
-Consistent with the original sets::.N.() function, the negation operator .N() in `fuzzysys` is always defined as 1-x irrespective of the fuzzy logic family.
+Consistent with the original sets::.N.() function, the negation operator .N() in `fuzzysys` is always defined as 1 − *x* irrespective of the fuzzy logic family.
 
 ``` r
 x
