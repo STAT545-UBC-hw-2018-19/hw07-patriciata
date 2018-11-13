@@ -11,7 +11,9 @@ RoxygenNote: 6.1.0
 Encoding: UTF-8
 LazyData: true
 Imports: sets
-Suggests: testthat, readxl,
+Suggests: testthat,
+    purrr,
     knitr,
+    sets,
     rmarkdown
 VignetteBuilder: knitr
